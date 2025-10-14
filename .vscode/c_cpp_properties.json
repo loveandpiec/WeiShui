@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "windows-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "USE_FULL_LL_DRIVER",
+                "HSE_VALUE=8000000",
+                "HSE_STARTUP_TIMEOUT=100",
+                "LSE_STARTUP_TIMEOUT=5000",
+                "LSE_VALUE=32768",
+                "MSI_VALUE=4000000",
+                "EXTERNALSAI1_CLOCK_VALUE=2097000",
+                "EXTERNALSAI2_CLOCK_VALUE=2097000",
+                "HSI_VALUE=16000000",
+                "LSI_VALUE=32000",
+                "VDD_VALUE=3300",
+                "PREFETCH_ENABLE=0",
+                "INSTRUCTION_CACHE_ENABLE=1",
+                "DATA_CACHE_ENABLE=1",
+                "STM32L412xx"
+            ],
+            "compilerPath": "C:/MinGW/bin/gcc.exe",
+            "cStandard": "${default}",
+            "cppStandard": "${default}",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

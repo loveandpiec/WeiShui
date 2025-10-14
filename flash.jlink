@@ -1,0 +1,6 @@
+w4 40023C00 2
+erase 0x08000000 0x1F800
+loadfile build/STML412KBT6_ms5803.hex
+r
+g
+q

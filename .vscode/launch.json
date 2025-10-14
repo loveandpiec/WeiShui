@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/WORK/Leycee/STML476RCT6_pcap04/Core/Src",
+      "program": "d:/WORK/Leycee/STML476RCT6_pcap04/Core/Src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "Cortex Debug",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/your_firmware.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "runToEntryPoint": "main",
+      "servertype": "openocd",
+      "interface": "swd",
+      "device": "STM32F103C8",
+      "configFiles": [
+          "interface/stlink.cfg",
+          "target/stm32f1x.cfg"
+      ],
+      "svdFile": "${workspaceFolder}/STM32F103xx.svd",
+      "showDevDebugOutput": true,
+      "postRestartCommands": [
+          "monitor reset halt",
+          "monitor arm semihosting enable"
+      ]
+  }
+  ]
+
+}

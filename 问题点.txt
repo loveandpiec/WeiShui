@@ -1,0 +1,84 @@
+1.闹钟没通，到时间没进中断，新板到后调试
+
+
+1.上位机设置时间，唤醒时间，lora参数（透传lora）
+
+
+
+[2025-10-10 22:59:54.262]
+RX：
+>>> Setting RTC Alarm to 08:03:15
+>>> Alarm set SUCCESS
+read_caldatacali_para=44702
+cali_para=39839
+cali_para=29509
+cali_para=28693
+cali_para=32569
+cali_para=29510
+Host communication prepared, waiting for commands (10s timeout)...
+Host serial port initialized: 9600,8,N,1
+Host prepared, device ID: 1. Will enter standby in 10s if no data received.
+
+[2025-10-10 22:59:54.553]
+RX：wakeup_source:2
+
+>>> Setting RTC Alarm start upload data
+
+[2025-10-10 22:59:54.898]
+RX：to 08:03:15
+>>> Alarm set SUCCESS
+
+[2025-10-10 22:59:55.082]
+RX：Entering standby mode now...
+
+[2025-10-11 02:59:55.945]
+RX：
+>>> Setting RTC Alarm to 12:03:15
+>>> Alarm set SUCCESS
+read_caldatacali_para=44702
+cali_para=39839
+cali_para=29509
+cali_para=28693
+cali_para=32569
+cali_para=29510
+Host communication prepared, waiting for commands (10s timeout)...
+Host serial port initialized: 9600,8,N,1
+Host prepared, device ID: 1. Will enter standby in 10s if no data received.
+
+[2025-10-11 02:59:56.239]
+RX：wakeup_source:2
+
+>>> Setting RTC Alarmstart upload data
+
+[2025-10-11 02:59:56.580]
+RX： to 12:03:15
+>>> Alarm set SUCCESS
+
+[2025-10-11 02:59:56.767]
+RX：Entering standby mode now...
+
+[2025-10-11 06:59:57.637]
+RX：
+>>> Setting RTC Alarm to 16:03:15
+>>> Alarm set SUCCESS
+read_caldatacali_para=44702
+cali_para=39839
+cali_para=29509
+cali_para=28693
+cali_para=32569
+cali_para=29510
+Host communication prepared, waiting for commands (10s timeout)...
+Host serial port initialized: 9600,8,N,1
+Host prepared, device ID: 1. Will enter standby in 10s if no data received.
+
+[2025-10-11 06:59:57.933]
+RX：wakeup_source:2
+
+>>> Setting RTC Alarmstart upload data
+
+[2025-10-11 06:59:58.275]
+RX： to 16:03:15
+>>> Alarm set SUCCESS
+
+[2025-10-11 06:59:58.461]
+RX：Entering standby mode now...
