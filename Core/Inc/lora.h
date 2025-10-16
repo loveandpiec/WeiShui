@@ -25,6 +25,7 @@ public:
     void start_protocol_handle_process();
     void upload_data();
     void on_recv(uint8_t ch) override;
+    void on_recv_idle() override;
     void reset_receive_buffer();
     ProtocolManager& get_protocol_manager(){return protocol_manager;}
 };

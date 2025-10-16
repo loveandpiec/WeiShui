@@ -23,6 +23,7 @@ public:
     void write(const void *buffer, size_t length);
     void serialport_it_rx_complete();
     virtual void on_recv(uint8_t ch);
+    virtual void on_recv_idle();
     virtual ~serialport();
     serialport(USART_TypeDef* usart,const serial_gpio& tx,const serial_gpio& rx);
     virtual void open(int32_t baudrate,uint8_t databits,float stopbits,char parity);

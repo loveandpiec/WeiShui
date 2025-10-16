@@ -93,8 +93,8 @@ int main(void)
 
     /* 3. 初始化必要的外设 */
     MX_GPIO_Init();
-    MX_I2C1_Init();
-    MX_ADC1_Init();
+    // MX_I2C1_Init();
+    // MX_ADC1_Init();
     MX_USART1_UART_Init();
     MX_LPUART1_UART_Init();
     MX_RTC_Init();  // 取消注释
@@ -159,6 +159,9 @@ void SystemClock_Config(void)
   LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
   LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
   LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+
+  // 添加LPUART时钟源配置
+  LL_RCC_SetLPUARTClockSource(LL_RCC_LPUART1_CLKSOURCE_PCLK1);
 
   LL_Init1msTick(80000000);
 
@@ -394,7 +397,7 @@ static void MX_LPUART1_UART_Init(void)
   GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_VERY_HIGH;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
   GPIO_InitStruct.Alternate = LL_GPIO_AF_8;
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
@@ -413,9 +416,9 @@ static void MX_LPUART1_UART_Init(void)
   LPUART_InitStruct.HardwareFlowControl = LL_LPUART_HWCONTROL_NONE;
   LL_LPUART_Init(LPUART1, &LPUART_InitStruct);
   LL_LPUART_Enable(LPUART1);
+  // LL_LPUART_ClearFlag_IDLE(LPUART1);
   LL_LPUART_EnableIT_RXNE(LPUART1);
   /* USER CODE BEGIN LPUART1_Init 2 */
-
   /* USER CODE END LPUART1_Init 2 */
 
 }

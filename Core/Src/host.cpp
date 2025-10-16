@@ -13,13 +13,14 @@ void Host::start_communication_prepare()
     
     // 初始化状态
     reset_receive_buffer();
+    reset_log_buffer();
     processing_command_ = false;
     data_received_ = false;
     standby_timer_canceled_ = false;
     in_wait_loop_ = false;
     
-    // 设置设备ID
-    protocol_manager.set_device_id(get_history_config()->device_id);
+    // // 设置设备ID
+    // protocol_manager.set_device_id(get_history_config()->device_id);
     
     // printf("Host prepared, device ID: %d. Will enter standby in 10s if no data received.\r\n", protocol_manager.get_device_id());
 }
@@ -70,6 +71,7 @@ void Host::start_protocol_handle_process()
     
     // 清空接收缓冲区，准备接收下一条命令
     reset_receive_buffer();
+    reset_log_buffer();
     processing_command_ = false;
     
     // printf("Ready for next command...\r\n");
@@ -99,6 +101,7 @@ void Host::on_recv(uint8_t ch)
     if (count_ >= (sizeof(recv_buffer_) - 1)) {
         // printf("Receive buffer overflow, resetting...\r\n");
         reset_receive_buffer();
+        reset_log_buffer();
         return;
     }
     
@@ -122,7 +125,7 @@ void Host::on_recv(uint8_t ch)
                 char*response_msg = protocol_manager.parse_host_at_command((char*)recv_buffer_);
                 if(response_msg)
                 {
-                    printf("data prepare to send to lora%s\r\n",response_msg);
+                    // printf("data prepare to send to lora%s\r\n",response_msg);
                     for (size_t i = 0; i < strlen(response_msg); i++)
                     {
                         LL_USART_TransmitData8(LPUART1, reinterpret_cast<const uint8_t *>(response_msg)[i]);

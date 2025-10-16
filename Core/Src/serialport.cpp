@@ -5,6 +5,7 @@
 #include <stm32l4xx_ll_utils.h>
 #include <cstring>
 #include <stdio.h>
+#include <stm32l4xx_ll_lpuart.h>
 serialport *lpuart1;
 serialport *usart1;
 serialport *usart2;
@@ -42,13 +43,31 @@ void serialport::serialport_it_rx_complete()
     {
         LL_USART_ClearFlag_NE(_usart_handle);
         on_recv(LL_USART_ReceiveData8(_usart_handle));
+        // LL_LPUART_EnableIT_IDLE(LPUART1);
+        LL_USART_EnableIT_IDLE(_usart_handle);
     }
+    else if(LL_USART_IsActiveFlag_IDLE(_usart_handle)&&LL_USART_IsEnabledIT_IDLE(_usart_handle))
+    {
+        LL_USART_ClearFlag_IDLE(_usart_handle);
+        on_recv_idle();
+    }
+    // else if(LL_LPUART_IsActiveFlag_IDLE(LPUART1)&&LL_LPUART_IsEnabledIT_IDLE(LPUART1))
+    // {
+    //     LL_LPUART_ClearFlag_IDLE(LPUART1);
+    //     on_recv_idle();
+    // }
 }
 void serialport::on_recv(uint8_t ch)
 {
 
 
 }
+
+void serialport::on_recv_idle()
+{
+
+}
+
 serialport::~serialport() {};
 serialport::serialport(USART_TypeDef *usart, const serial_gpio &gpio_tx, const serial_gpio &gpio_rx) : _tx_pin(gpio_tx), _rx_pin(gpio_rx)
 {

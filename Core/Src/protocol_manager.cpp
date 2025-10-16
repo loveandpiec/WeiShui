@@ -371,7 +371,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     // 参数检查
     if (!recv_msg) 
     {
-        printf("invalid input parameters\r\n");
+        // printf("invalid input parameters\r\n");
         return NULL;
     }
 
@@ -379,7 +379,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     cJSON* json_root = cJSON_Parse(recv_msg);
     if(!json_root) 
     {
-        printf("can't parse json_root is nullptr\r\n");
+        // internal_printf("can't parse json_root is nullptr\r\n");
         return NULL;
     }
 
@@ -387,7 +387,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     cJSON* request = cJSON_GetObjectItem(json_root, "request");
     if(!request || !cJSON_IsString(request) || !strstr(request->valuestring, "lora")) 
     {
-        printf("request is not lora command\r\n");
+        // internal_printf("request is not lora command\r\n");
         cJSON_Delete(json_root);
         return NULL;
     }
@@ -396,7 +396,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     cJSON* param_list = cJSON_GetObjectItem(json_root, "param_list");
     if(!param_list || !cJSON_IsArray(param_list)) 
     {
-        printf("can't parse param_list is nullptr or not array\r\n");
+        // internal_printf("can't parse param_list is nullptr or not array\r\n");
         cJSON_Delete(json_root);
         return NULL;
     }
@@ -405,7 +405,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     int param_count = cJSON_GetArraySize(param_list);
     if(param_count == 0) 
     {
-        printf("param_list is empty\r\n");
+        // internal_printf("param_list is empty\r\n");
         cJSON_Delete(json_root);
         return NULL;
     }
@@ -414,7 +414,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     cJSON* item = cJSON_GetArrayItem(param_list, 0);
     if(!item || !cJSON_IsString(item) || !item->valuestring) 
     {
-        printf("no valid AT command found\r\n");
+        // internal_printf("no valid AT command found\r\n");
         cJSON_Delete(json_root);
         return NULL;
     }
@@ -422,7 +422,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
     char* at_command = (char*)malloc(strlen(item->valuestring) + 3);
     if(!at_command) 
     {
-        printf("malloc for at_command failed\r\n");
+        // internal_printf("malloc for at_command failed\r\n");
         cJSON_Delete(json_root);
         return NULL;
     }
@@ -437,7 +437,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
             src++;
         }
         *dst = '\0';
-        printf("AT command (+++): %s\n", at_command);
+        // printf("AT command (+++): %s\n", at_command);
     } 
     else {
         strcpy(at_command, item->valuestring);
@@ -445,7 +445,7 @@ char *ProtocolManager::parse_host_at_command(const char *recv_msg)
         // 检查是否需要添加\r\n
         strcat(at_command, "\r\n");
         
-        printf("AT command: %s", at_command);
+        // printf("AT command: %s", at_command);
     }
 
     cJSON_Delete(json_root);
@@ -529,6 +529,12 @@ void internal_printf(const char *format, ...)
     // va_start(args, format);
     // vprintf(format, args);
     // va_end(args);
+}
+
+void reset_log_buffer()
+{
+    memset(log_buffer_,0,sizeof(log_buffer_));
+    log_buffer_pos_ = 0;
 }
 
 void clear_log()
