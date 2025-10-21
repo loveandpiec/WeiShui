@@ -46,7 +46,7 @@ iic_ms5803_driver::iic_ms5803_driver()
 
 void iic_ms5803_driver::read_caldata()
 {
-    // fprintf(stderr,__FUNCTION__);
+    fprintf(stderr,__FUNCTION__);
     LL_I2C_DisableIT_RX(I2C1);
     LL_I2C_DisableIT_TX(I2C1);
     uint8_t send_buffer[6] = {0xA2, 0xA4, 0xA6, 0xA8, 0xAA, 0xAC};
