@@ -9,8 +9,8 @@ char *ProtocolManager::lora_protocol_json_handle(const char *recv_msg)
     // 清空之前的日志
     clear_log();
     
-    internal_printf("lora_protocol_json_handle called\r\n");
-    internal_printf("recv_msg: %s\r\n", recv_msg);
+    // internal_printf("lora_protocol_json_handle called\r\n");
+    // internal_printf("recv_msg: %s\r\n", recv_msg);
     // printf("recv_msg: %s\r\n", recv_msg);
 
     // 获取root
@@ -32,12 +32,12 @@ char *ProtocolManager::lora_protocol_json_handle(const char *recv_msg)
         cJSON_Delete(json_root);
         _power_manager.enter_standby_mode();
     }
-    internal_printf("msg_id:%s\n",msg_id->valuestring);
+    // internal_printf("msg_id:%s\n",msg_id->valuestring);
     // printf("msg_id:%s\n",msg_id->valuestring);
 
 
     cJSON*cjson_device_id = cJSON_GetObjectItem(json_root,"device_id");
-    internal_printf("self device_id:%s,recv device_id:%s",get_history_config()->device_id,cjson_device_id->valueint);
+    // internal_printf("self device_id:%s,recv device_id:%s",get_history_config()->device_id,cjson_device_id->valueint);
     if(!cjson_device_id || !cJSON_IsNumber(cjson_device_id)|| get_history_config()->device_id != cjson_device_id->valueint)
     {
         internal_printf("can't parse device_id is nullptr or not number\r\n");
@@ -59,7 +59,7 @@ char *ProtocolManager::lora_protocol_json_handle(const char *recv_msg)
             cJSON_Delete(json_root);
             _power_manager.enter_standby_mode();
         }
-        internal_printf("request:%s\n",request->valuestring);
+        // internal_printf("request:%s\n",request->valuestring);
 
         // 获取param_list - 这里应该是数组而不是字符串
         cJSON* param_list = cJSON_GetObjectItem(json_root,"param_list");
@@ -104,7 +104,7 @@ char *ProtocolManager::generate_lora_protocol_json(const char* msg_id,const char
         cJSON_AddStringToObject(log,"temperature",buffer);
         
         memset(buffer,0,sizeof(buffer));
-        sprintf(buffer,"%.2f",pressure);
+        sprintf(buffer,"%.4f",pressure);
         cJSON_AddStringToObject(log,"pressure",buffer);
 
         memset(buffer,0,sizeof(buffer));
@@ -347,13 +347,13 @@ char *ProtocolManager::generate_lora_protocol_json(const char* msg_id,const char
         }
     }
 
-    // 添加debug信息
-    const char*debug_log = log_buffer_;
-    if(strlen(debug_log) > 0)
-    {
-        cJSON_AddStringToObject(root,"debug",debug_log);
-        internal_printf("Added debug log to JSON, length: %d\r\n", strlen(debug_log));
-    }
+    // // 添加debug信息
+    // const char*debug_log = log_buffer_;
+    // if(strlen(debug_log) > 0)
+    // {
+    //     cJSON_AddStringToObject(root,"debug",debug_log);
+    //     internal_printf("Added debug log to JSON, length: %d\r\n", strlen(debug_log));
+    // }
 
     char* result = cJSON_Print(root);
     cJSON_Delete(root);
@@ -485,13 +485,13 @@ char *ProtocolManager::wrap_lora_response_json(const char* msg_id, const char* l
     {
         cJSON_AddStringToObject(root, "result", "");
     }
-        // 添加debug信息
-    const char*debug_log = log_buffer_;
-    if(strlen(debug_log) > 0)
-    {
-        cJSON_AddStringToObject(root,"debug",debug_log);
-        internal_printf("Added debug log to JSON, length: %d\r\n", strlen(debug_log));
-    }
+    //     // 添加debug信息
+    // const char*debug_log = log_buffer_;
+    // if(strlen(debug_log) > 0)
+    // {
+    //     cJSON_AddStringToObject(root,"debug",debug_log);
+    //     internal_printf("Added debug log to JSON, length: %d\r\n", strlen(debug_log));
+    // }
 
     char* result_json = cJSON_Print(root);
     cJSON_Delete(root);
@@ -524,17 +524,25 @@ void internal_printf(const char *format, ...)
     }
     
     va_end(args);
-    
+
+    // 添加debug信息
+    const char*debug_log = log_buffer_;
+    cJSON* root = cJSON_CreateObject();
+    if(strlen(debug_log) > 0)
+        cJSON_AddStringToObject(root,"debug",debug_log);
+    char* result_json = cJSON_Print(root);
+    cJSON_Delete(root);
+
+    for (size_t i = 0; i < strlen(result_json); i++)
+    {
+        LL_USART_TransmitData8(USART1, reinterpret_cast<const uint8_t *>(result_json)[i]);
+        while (!LL_USART_IsActiveFlag_TC(USART1));
+    }
+
     // // 同时输出到标准输出（可选，用于调试）
     // va_start(args, format);
     // vprintf(format, args);
     // va_end(args);
-}
-
-void reset_log_buffer()
-{
-    memset(log_buffer_,0,sizeof(log_buffer_));
-    log_buffer_pos_ = 0;
 }
 
 void clear_log()

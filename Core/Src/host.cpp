@@ -13,7 +13,6 @@ void Host::start_communication_prepare()
     
     // 初始化状态
     reset_receive_buffer();
-    reset_log_buffer();
     processing_command_ = false;
     data_received_ = false;
     standby_timer_canceled_ = false;
@@ -71,7 +70,6 @@ void Host::start_protocol_handle_process()
     
     // 清空接收缓冲区，准备接收下一条命令
     reset_receive_buffer();
-    reset_log_buffer();
     processing_command_ = false;
     
     // printf("Ready for next command...\r\n");
@@ -101,7 +99,6 @@ void Host::on_recv(uint8_t ch)
     if (count_ >= (sizeof(recv_buffer_) - 1)) {
         // printf("Receive buffer overflow, resetting...\r\n");
         reset_receive_buffer();
-        reset_log_buffer();
         return;
     }
     

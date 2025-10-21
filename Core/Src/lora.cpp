@@ -86,7 +86,7 @@ void Lora::on_recv(uint8_t ch)
             }
         }
         reset_receive_buffer();
-        reset_log_buffer();
+        clear_log();
     }
 }
 
@@ -116,7 +116,7 @@ void Lora::on_recv_idle()
             }
         }
         reset_receive_buffer();
-        reset_log_buffer();
+        clear_log();
     }
     
 }

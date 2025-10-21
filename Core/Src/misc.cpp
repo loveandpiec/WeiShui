@@ -43,9 +43,9 @@ extern "C" int _write(int fd, char *ptr, int len)
 {
     for (int i = 0; i < len; i++)
     {
-        // 把打印信息存储起来
-        LL_USART_TransmitData8(USART1, ptr[i]);
-        while (!LL_USART_IsActiveFlag_TC(USART1));
+        // // 把打印信息存储起来
+        // LL_USART_TransmitData8(USART1, ptr[i]);
+        // while (!LL_USART_IsActiveFlag_TC(USART1));
     }
     return len;
 }

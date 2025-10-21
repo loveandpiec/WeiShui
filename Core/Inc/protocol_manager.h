@@ -12,8 +12,6 @@ extern int log_buffer_pos_;
 // 内部打印函数
 void internal_printf(const char* format, ...);
 
-void reset_log_buffer();
-
 // 清空日志
 void clear_log();
 

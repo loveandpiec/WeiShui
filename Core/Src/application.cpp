@@ -71,7 +71,6 @@ public:
         sht35->sample_ok.connect(WRAP(sht35_sample_complete, this));
         _host.reset_receive_buffer();
         _lora.reset_receive_buffer();
-        reset_log_buffer();
         g_task_queue = &_task_queue;
         g_param_buffer = &_param_buffer;
         ms5830 = &_ms5830;

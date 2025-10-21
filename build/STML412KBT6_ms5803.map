@@ -780,8 +780,6 @@ Discarded input sections
  .text          0x00000000        0x0 build/protocol_manager.o
  .data          0x00000000        0x0 build/protocol_manager.o
  .bss           0x00000000        0x0 build/protocol_manager.o
- .text._Z9clear_logv
-                0x00000000        0x4 build/protocol_manager.o
  .text          0x00000000       0x14 build/startup_stm32l412xx.o
  .data          0x00000000        0x0 build/startup_stm32l412xx.o
  .bss           0x00000000        0x0 build/startup_stm32l412xx.o
@@ -1522,7 +1520,7 @@ LOAD d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/
                 0x08000190                . = ALIGN (0x8)
  *fill*         0x0800018c        0x4 
 
-.text           0x080001c0    0x13c18
+.text           0x080001c0    0x13bb8
                 0x080001c0                . = ALIGN (0x8)
  *(.text)
  .text          0x080001c0       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -2016,818 +2014,819 @@ LOAD d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/
                 0x08004f5c                operator new(unsigned int)
  .text._ZdlPv   0x08004f60        0x4 build/misc.o
                 0x08004f60                operator delete(void*)
- .text._write   0x08004f64       0x20 build/misc.o
+ .text._write   0x08004f64        0x4 build/misc.o
                 0x08004f64                _write
  .text._ZN10serialport7on_recvEh
-                0x08004f84        0x2 build/serialport.o
-                0x08004f84                serialport::on_recv(unsigned char)
+                0x08004f68        0x2 build/serialport.o
+                0x08004f68                serialport::on_recv(unsigned char)
  .text._ZN10serialport12on_recv_idleEv
-                0x08004f86        0x2 build/serialport.o
-                0x08004f86                serialport::on_recv_idle()
+                0x08004f6a        0x2 build/serialport.o
+                0x08004f6a                serialport::on_recv_idle()
  .text._ZN10serialportD2Ev
-                0x08004f88        0x2 build/serialport.o
-                0x08004f88                serialport::~serialport()
-                0x08004f88                serialport::~serialport()
+                0x08004f6c        0x2 build/serialport.o
+                0x08004f6c                serialport::~serialport()
+                0x08004f6c                serialport::~serialport()
  .text._ZN10serialportD0Ev
-                0x08004f8a        0xc build/serialport.o
-                0x08004f8a                serialport::~serialport()
- *fill*         0x08004f96        0x2 
+                0x08004f6e        0xc build/serialport.o
+                0x08004f6e                serialport::~serialport()
+ *fill*         0x08004f7a        0x6 
  .text._ZN10serialport4openElhfc
-                0x08004f98      0x120 build/serialport.o
-                0x08004f98                serialport::open(long, unsigned char, float, char)
+                0x08004f80      0x120 build/serialport.o
+                0x08004f80                serialport::open(long, unsigned char, float, char)
  .text._ZN11serial_gpioC2EP12GPIO_TypeDefm
-                0x080050b8        0x6 build/serialport.o
-                0x080050b8                serial_gpio::serial_gpio(GPIO_TypeDef*, unsigned long)
-                0x080050b8                serial_gpio::serial_gpio(GPIO_TypeDef*, unsigned long)
+                0x080050a0        0x6 build/serialport.o
+                0x080050a0                serial_gpio::serial_gpio(GPIO_TypeDef*, unsigned long)
+                0x080050a0                serial_gpio::serial_gpio(GPIO_TypeDef*, unsigned long)
  .text._ZN10serialport5writeEPKvj
-                0x080050be       0x1a build/serialport.o
-                0x080050be                serialport::write(void const*, unsigned int)
+                0x080050a6       0x1a build/serialport.o
+                0x080050a6                serialport::write(void const*, unsigned int)
  .text._ZN10serialport25serialport_it_rx_completeEv
-                0x080050d8       0x4a build/serialport.o
-                0x080050d8                serialport::serialport_it_rx_complete()
- *fill*         0x08005122        0x2 
+                0x080050c0       0x4a build/serialport.o
+                0x080050c0                serialport::serialport_it_rx_complete()
+ *fill*         0x0800510a        0x2 
  .text._ZN10serialportC2EP13USART_TypeDefRK11serial_gpioS4_
-                0x08005124       0x68 build/serialport.o
-                0x08005124                serialport::serialport(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
-                0x08005124                serialport::serialport(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x0800510c       0x68 build/serialport.o
+                0x0800510c                serialport::serialport(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x0800510c                serialport::serialport(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
  .text.LPUART1_IRQHandler
-                0x0800518c        0xc build/serialport.o
-                0x0800518c                LPUART1_IRQHandler
+                0x08005174        0xc build/serialport.o
+                0x08005174                LPUART1_IRQHandler
  .text.USART1_IRQHandler
-                0x08005198        0xc build/serialport.o
-                0x08005198                USART1_IRQHandler
+                0x08005180        0xc build/serialport.o
+                0x08005180                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x080051a4        0xc build/serialport.o
-                0x080051a4                USART2_IRQHandler
+                0x0800518c        0xc build/serialport.o
+                0x0800518c                USART2_IRQHandler
  .text._ZN4LoraD2Ev
-                0x080051b0       0x40 build/lora.o
-                0x080051b0                Lora::~Lora()
-                0x080051b0                Lora::~Lora()
+                0x08005198       0x40 build/lora.o
+                0x08005198                Lora::~Lora()
+                0x08005198                Lora::~Lora()
  .text._ZN4LoraD0Ev
-                0x080051f0       0x12 build/lora.o
-                0x080051f0                Lora::~Lora()
+                0x080051d8       0x12 build/lora.o
+                0x080051d8                Lora::~Lora()
  .text._ZN4Lora29start_protocol_handle_processEv
-                0x08005202       0x2e build/lora.o
-                0x08005202                Lora::start_protocol_handle_process()
+                0x080051ea       0x2e build/lora.o
+                0x080051ea                Lora::start_protocol_handle_process()
  .text._ZN4Lora11upload_dataEv
-                0x08005230       0x34 build/lora.o
-                0x08005230                Lora::upload_data()
+                0x08005218       0x34 build/lora.o
+                0x08005218                Lora::upload_data()
  .text._ZN4LoraC2EP13USART_TypeDefRK11serial_gpioS4_
-                0x08005264       0x6c build/lora.o
-                0x08005264                Lora::Lora(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
-                0x08005264                Lora::Lora(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x0800524c       0x6c build/lora.o
+                0x0800524c                Lora::Lora(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x0800524c                Lora::Lora(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
  .text._ZN4Lora20reset_receive_bufferEv
-                0x080052d0       0x18 build/lora.o
-                0x080052d0                Lora::reset_receive_buffer()
+                0x080052b8       0x18 build/lora.o
+                0x080052b8                Lora::reset_receive_buffer()
  .text._ZN4Lora7on_recvEh
-                0x080052e8       0xb0 build/lora.o
-                0x080052e8                Lora::on_recv(unsigned char)
+                0x080052d0       0xb0 build/lora.o
+                0x080052d0                Lora::on_recv(unsigned char)
  .text._ZN4Lora12on_recv_idleEv
-                0x08005398       0x90 build/lora.o
-                0x08005398                Lora::on_recv_idle()
+                0x08005380       0x90 build/lora.o
+                0x08005380                Lora::on_recv_idle()
  .text._ZN4HostD2Ev
-                0x08005428       0x14 build/host.o
-                0x08005428                Host::~Host()
-                0x08005428                Host::~Host()
+                0x08005410       0x14 build/host.o
+                0x08005410                Host::~Host()
+                0x08005410                Host::~Host()
  .text._ZN4HostD0Ev
-                0x0800543c       0x12 build/host.o
-                0x0800543c                Host::~Host()
+                0x08005424       0x12 build/host.o
+                0x08005424                Host::~Host()
  .text._ZN4Host20reset_receive_bufferEv
-                0x0800544e       0x18 build/host.o
-                0x0800544e                Host::reset_receive_buffer()
+                0x08005436       0x18 build/host.o
+                0x08005436                Host::reset_receive_buffer()
  .text._ZN4Host27start_communication_prepareEv
-                0x08005466       0x14 build/host.o
-                0x08005466                Host::start_communication_prepare()
+                0x0800544e       0x14 build/host.o
+                0x0800544e                Host::start_communication_prepare()
  .text._ZN4Host29start_protocol_handle_processEv
-                0x0800547a       0x48 build/host.o
-                0x0800547a                Host::start_protocol_handle_process()
- *fill*         0x080054c2        0x2 
+                0x08005462       0x48 build/host.o
+                0x08005462                Host::start_protocol_handle_process()
+ *fill*         0x080054aa        0x2 
  .text._ZN4Host7on_recvEh
-                0x080054c4       0xcc build/host.o
-                0x080054c4                Host::on_recv(unsigned char)
+                0x080054ac       0xcc build/host.o
+                0x080054ac                Host::on_recv(unsigned char)
  .text._ZN4HostC2EP13USART_TypeDefRK11serial_gpioS4_
-                0x08005590       0x54 build/host.o
-                0x08005590                Host::Host(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
-                0x08005590                Host::Host(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x08005578       0x54 build/host.o
+                0x08005578                Host::Host(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
+                0x08005578                Host::Host(USART_TypeDef*, serial_gpio const&, serial_gpio const&)
  .text.LL_GPIO_SetPinPull.constprop.0
-                0x080055e4       0x26 build/power_manager.o
+                0x080055cc       0x26 build/power_manager.o
  .text.LL_GPIO_SetPinMode.constprop.0
-                0x0800560a       0x2c build/power_manager.o
- *fill*         0x08005636        0x2 
+                0x080055f2       0x2c build/power_manager.o
+ *fill*         0x0800561e        0x2 
  .text._ZN12PowerManager13usart1_deinitEv
-                0x08005638       0xc4 build/power_manager.o
-                0x08005638                PowerManager::usart1_deinit()
+                0x08005620       0xc4 build/power_manager.o
+                0x08005620                PowerManager::usart1_deinit()
  .text._ZN12PowerManager11I2C1_DeInitEv
-                0x080056fc       0x74 build/power_manager.o
-                0x080056fc                PowerManager::I2C1_DeInit()
+                0x080056e4       0x74 build/power_manager.o
+                0x080056e4                PowerManager::I2C1_DeInit()
  .text._ZN12PowerManager13lpuart_deinitEv
-                0x08005770       0xe4 build/power_manager.o
-                0x08005770                PowerManager::lpuart_deinit()
+                0x08005758       0xe4 build/power_manager.o
+                0x08005758                PowerManager::lpuart_deinit()
  .text._ZN12PowerManager11gpio_deinitEv
-                0x08005854       0x54 build/power_manager.o
-                0x08005854                PowerManager::gpio_deinit()
+                0x0800583c       0x54 build/power_manager.o
+                0x0800583c                PowerManager::gpio_deinit()
  .text._ZN12PowerManager6deinitEv
-                0x080058a8       0x1e build/power_manager.o
-                0x080058a8                PowerManager::deinit()
- *fill*         0x080058c6        0x2 
+                0x08005890       0x1e build/power_manager.o
+                0x08005890                PowerManager::deinit()
+ *fill*         0x080058ae        0x2 
  .text._ZN12PowerManager18enter_standby_modeEv
-                0x080058c8       0x70 build/power_manager.o
-                0x080058c8                PowerManager::enter_standby_mode()
- .text._ZN15ProtocolManager21parse_host_at_commandEPKc
-                0x08005938       0xe0 build/protocol_manager.o
-                0x08005938                ProtocolManager::parse_host_at_command(char const*)
- .text._Z16reset_log_bufferv
-                0x08005a18       0x20 build/protocol_manager.o
-                0x08005a18                reset_log_buffer()
- .text._Z15internal_printfPKcz
-                0x08005a38       0x5c build/protocol_manager.o
-                0x08005a38                internal_printf(char const*, ...)
+                0x080058b0       0x70 build/power_manager.o
+                0x080058b0                PowerManager::enter_standby_mode()
  .text._ZN15ProtocolManager27generate_lora_protocol_jsonEPKcS1_P5cJSON
-                0x08005a94      0x910 build/protocol_manager.o
-                0x08005a94                ProtocolManager::generate_lora_protocol_json(char const*, char const*, cJSON*)
+                0x08005920      0x8e8 build/protocol_manager.o
+                0x08005920                ProtocolManager::generate_lora_protocol_json(char const*, char const*, cJSON*)
+ .text._ZN15ProtocolManager21parse_host_at_commandEPKc
+                0x08006208       0xe0 build/protocol_manager.o
+                0x08006208                ProtocolManager::parse_host_at_command(char const*)
  .text._ZN15ProtocolManager23wrap_lora_response_jsonEPKcS1_
-                0x080063a4       0x8c build/protocol_manager.o
-                0x080063a4                ProtocolManager::wrap_lora_response_json(char const*, char const*)
+                0x080062e8       0x64 build/protocol_manager.o
+                0x080062e8                ProtocolManager::wrap_lora_response_json(char const*, char const*)
+ .text._Z9clear_logv
+                0x0800634c       0x20 build/protocol_manager.o
+                0x0800634c                clear_log()
+ .text._Z15internal_printfPKcz
+                0x0800636c       0xa0 build/protocol_manager.o
+                0x0800636c                internal_printf(char const*, ...)
  .text._ZN15ProtocolManager25lora_protocol_json_handleEPKc
-                0x08006430      0x170 build/protocol_manager.o
-                0x08006430                ProtocolManager::lora_protocol_json_handle(char const*)
+                0x0800640c      0x134 build/protocol_manager.o
+                0x0800640c                ProtocolManager::lora_protocol_json_handle(char const*)
  .text.Reset_Handler
-                0x080065a0       0x50 build/startup_stm32l412xx.o
-                0x080065a0                Reset_Handler
+                0x08006540       0x50 build/startup_stm32l412xx.o
+                0x08006540                Reset_Handler
  .text.Default_Handler
-                0x080065f0        0x2 build/startup_stm32l412xx.o
-                0x080065f0                EXTI2_IRQHandler
-                0x080065f0                TIM1_CC_IRQHandler
-                0x080065f0                TSC_IRQHandler
-                0x080065f0                TIM6_IRQHandler
-                0x080065f0                TAMP_STAMP_IRQHandler
-                0x080065f0                EXTI3_IRQHandler
-                0x080065f0                LPTIM2_IRQHandler
-                0x080065f0                I2C3_ER_IRQHandler
-                0x080065f0                EXTI0_IRQHandler
-                0x080065f0                I2C2_EV_IRQHandler
-                0x080065f0                FPU_IRQHandler
-                0x080065f0                TIM1_UP_TIM16_IRQHandler
-                0x080065f0                ADC1_2_IRQHandler
-                0x080065f0                SPI1_IRQHandler
-                0x080065f0                DMA2_Channel2_IRQHandler
-                0x080065f0                DMA1_Channel4_IRQHandler
-                0x080065f0                USART3_IRQHandler
-                0x080065f0                DMA1_Channel7_IRQHandler
-                0x080065f0                DMA2_Channel1_IRQHandler
-                0x080065f0                QUADSPI_IRQHandler
-                0x080065f0                DMA1_Channel6_IRQHandler
-                0x080065f0                DMA2_Channel4_IRQHandler
-                0x080065f0                RCC_IRQHandler
-                0x080065f0                TIM1_TRG_COM_IRQHandler
-                0x080065f0                DMA1_Channel1_IRQHandler
-                0x080065f0                Default_Handler
-                0x080065f0                DMA2_Channel7_IRQHandler
-                0x080065f0                EXTI15_10_IRQHandler
-                0x080065f0                I2C3_EV_IRQHandler
-                0x080065f0                USB_IRQHandler
-                0x080065f0                EXTI9_5_IRQHandler
-                0x080065f0                RTC_WKUP_IRQHandler
-                0x080065f0                PVD_PVM_IRQHandler
-                0x080065f0                SPI2_IRQHandler
-                0x080065f0                DMA2_Channel5_IRQHandler
-                0x080065f0                CRS_IRQHandler
-                0x080065f0                DMA1_Channel5_IRQHandler
-                0x080065f0                EXTI4_IRQHandler
-                0x080065f0                RNG_IRQHandler
-                0x080065f0                DMA1_Channel3_IRQHandler
-                0x080065f0                COMP_IRQHandler
-                0x080065f0                WWDG_IRQHandler
-                0x080065f0                DMA2_Channel6_IRQHandler
-                0x080065f0                TIM2_IRQHandler
-                0x080065f0                EXTI1_IRQHandler
-                0x080065f0                I2C2_ER_IRQHandler
-                0x080065f0                DMA1_Channel2_IRQHandler
-                0x080065f0                FLASH_IRQHandler
-                0x080065f0                LPTIM1_IRQHandler
-                0x080065f0                DMA2_Channel3_IRQHandler
-                0x080065f0                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x080065f2        0x2 
- .text.__errno  0x080065f4        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-errno.o)
-                0x080065f4                __errno
+                0x08006590        0x2 build/startup_stm32l412xx.o
+                0x08006590                EXTI2_IRQHandler
+                0x08006590                TIM1_CC_IRQHandler
+                0x08006590                TSC_IRQHandler
+                0x08006590                TIM6_IRQHandler
+                0x08006590                TAMP_STAMP_IRQHandler
+                0x08006590                EXTI3_IRQHandler
+                0x08006590                LPTIM2_IRQHandler
+                0x08006590                I2C3_ER_IRQHandler
+                0x08006590                EXTI0_IRQHandler
+                0x08006590                I2C2_EV_IRQHandler
+                0x08006590                FPU_IRQHandler
+                0x08006590                TIM1_UP_TIM16_IRQHandler
+                0x08006590                ADC1_2_IRQHandler
+                0x08006590                SPI1_IRQHandler
+                0x08006590                DMA2_Channel2_IRQHandler
+                0x08006590                DMA1_Channel4_IRQHandler
+                0x08006590                USART3_IRQHandler
+                0x08006590                DMA1_Channel7_IRQHandler
+                0x08006590                DMA2_Channel1_IRQHandler
+                0x08006590                QUADSPI_IRQHandler
+                0x08006590                DMA1_Channel6_IRQHandler
+                0x08006590                DMA2_Channel4_IRQHandler
+                0x08006590                RCC_IRQHandler
+                0x08006590                TIM1_TRG_COM_IRQHandler
+                0x08006590                DMA1_Channel1_IRQHandler
+                0x08006590                Default_Handler
+                0x08006590                DMA2_Channel7_IRQHandler
+                0x08006590                EXTI15_10_IRQHandler
+                0x08006590                I2C3_EV_IRQHandler
+                0x08006590                USB_IRQHandler
+                0x08006590                EXTI9_5_IRQHandler
+                0x08006590                RTC_WKUP_IRQHandler
+                0x08006590                PVD_PVM_IRQHandler
+                0x08006590                SPI2_IRQHandler
+                0x08006590                DMA2_Channel5_IRQHandler
+                0x08006590                CRS_IRQHandler
+                0x08006590                DMA1_Channel5_IRQHandler
+                0x08006590                EXTI4_IRQHandler
+                0x08006590                RNG_IRQHandler
+                0x08006590                DMA1_Channel3_IRQHandler
+                0x08006590                COMP_IRQHandler
+                0x08006590                WWDG_IRQHandler
+                0x08006590                DMA2_Channel6_IRQHandler
+                0x08006590                TIM2_IRQHandler
+                0x08006590                EXTI1_IRQHandler
+                0x08006590                I2C2_ER_IRQHandler
+                0x08006590                DMA1_Channel2_IRQHandler
+                0x08006590                FLASH_IRQHandler
+                0x08006590                LPTIM1_IRQHandler
+                0x08006590                DMA2_Channel3_IRQHandler
+                0x08006590                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x08006592        0x2 
+ .text.__errno  0x08006594        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-errno.o)
+                0x08006594                __errno
  .text.__libc_init_array
-                0x08006600       0x48 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-init.o)
-                0x08006600                __libc_init_array
- .text.malloc   0x08006648       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-malloc.o)
-                0x08006648                malloc
- .text.free     0x08006658       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-malloc.o)
-                0x08006658                free
+                0x080065a0       0x48 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-init.o)
+                0x080065a0                __libc_init_array
+ .text.malloc   0x080065e8       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-malloc.o)
+                0x080065e8                malloc
+ .text.free     0x080065f8       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-malloc.o)
+                0x080065f8                free
  .text._malloc_r
-                0x08006668      0x560 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mallocr.o)
-                0x08006668                _malloc_r
- .text.memmove  0x08006bc8       0xf8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memmove.o)
-                0x08006bc8                memmove
- .text.memset   0x08006cc0       0xa4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memset.o)
-                0x08006cc0                memset
+                0x08006608      0x560 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mallocr.o)
+                0x08006608                _malloc_r
+ .text.memmove  0x08006b68       0xf8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memmove.o)
+                0x08006b68                memmove
+ .text.memset   0x08006c60       0xa4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memset.o)
+                0x08006c60                memset
  .text.__malloc_lock
-                0x08006d64        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mlock.o)
-                0x08006d64                __malloc_lock
+                0x08006d04        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mlock.o)
+                0x08006d04                __malloc_lock
  .text.__malloc_unlock
-                0x08006d70        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mlock.o)
-                0x08006d70                __malloc_unlock
- .text._puts_r  0x08006d7c       0x9c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
-                0x08006d7c                _puts_r
- .text.puts     0x08006e18       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
-                0x08006e18                puts
- .text.realloc  0x08006e28       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-realloc.o)
-                0x08006e28                realloc
+                0x08006d10        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mlock.o)
+                0x08006d10                __malloc_unlock
+ .text._puts_r  0x08006d1c       0x9c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
+                0x08006d1c                _puts_r
+ .text.puts     0x08006db8       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
+                0x08006db8                puts
+ .text.realloc  0x08006dc8       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-realloc.o)
+                0x08006dc8                realloc
  .text._realloc_r
-                0x08006e40      0x3d8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-reallocr.o)
-                0x08006e40                _realloc_r
- .text._sbrk_r  0x08007218       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sbrkr.o)
-                0x08007218                _sbrk_r
- .text.sprintf  0x0800723c       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sprintf.o)
-                0x0800723c                sprintf
- .text.sscanf   0x0800727c       0x58 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sscanf.o)
-                0x0800727c                sscanf
- .text.__sread  0x080072d4       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
-                0x080072d4                __sread
+                0x08006de0      0x3d8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-reallocr.o)
+                0x08006de0                _realloc_r
+ .text._sbrk_r  0x080071b8       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sbrkr.o)
+                0x080071b8                _sbrk_r
+ .text.sprintf  0x080071dc       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sprintf.o)
+                0x080071dc                sprintf
+ .text.sscanf   0x0800721c       0x58 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sscanf.o)
+                0x0800721c                sscanf
+ .text.__sread  0x08007274       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
+                0x08007274                __sread
  .text.__seofread
-                0x080072f8        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
-                0x080072f8                __seofread
+                0x08007298        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
+                0x08007298                __seofread
  .text.__swrite
-                0x080072fc       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
-                0x080072fc                __swrite
- .text.__sseek  0x0800733c       0x20 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
-                0x0800733c                __sseek
+                0x0800729c       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
+                0x0800729c                __swrite
+ .text.__sseek  0x080072dc       0x20 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
+                0x080072dc                __sseek
  .text.__sclose
-                0x0800735c        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
-                0x0800735c                __sclose
- .text.strcat   0x08007364       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strcat.o)
-                0x08007364                strcat
- .text.strchr   0x080073a4       0xcc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strchr.o)
-                0x080073a4                strchr
- .text.strcpy   0x08007470       0xbc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strcpy.o)
-                0x08007470                strcpy
- .text.strncmp  0x0800752c       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strncmp.o)
-                0x0800752c                strncmp
+                0x080072fc        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-stdio.o)
+                0x080072fc                __sclose
+ .text.strcat   0x08007304       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strcat.o)
+                0x08007304                strcat
+ .text.strchr   0x08007344       0xcc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strchr.o)
+                0x08007344                strchr
+ .text.strcpy   0x08007410       0xbc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strcpy.o)
+                0x08007410                strcpy
+ .text.strncmp  0x080074cc       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strncmp.o)
+                0x080074cc                strncmp
  .text.two_way_long_needle
-                0x080075ac      0x2b4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strstr.o)
- .text.strstr   0x08007860      0x168 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strstr.o)
-                0x08007860                strstr
+                0x0800754c      0x2b4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strstr.o)
+ .text.strstr   0x08007800      0x168 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strstr.o)
+                0x08007800                strstr
  .text._strtod_l
-                0x080079c8      0xf50 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
-                0x080079c8                _strtod_l
+                0x08007968      0xf50 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+                0x08007968                _strtod_l
  .text._strtod_r
-                0x08008918        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
-                0x08008918                _strtod_r
- .text.strtod   0x08008924       0x20 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
-                0x08008924                strtod
- *fill*         0x08008944        0x4 
+                0x080088b8        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+                0x080088b8                _strtod_r
+ .text.strtod   0x080088c4       0x20 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+                0x080088c4                strtod
+ *fill*         0x080088e4        0x4 
  .text._svfprintf_r
-                0x08008948     0x1acc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
-                0x08008948                _svfprintf_r
+                0x080088e8     0x1acc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
+                0x080088e8                _svfprintf_r
  .text.__ssvfscanf_r
-                0x0800a414     0x1754 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
-                0x0800a414                __ssvfscanf_r
+                0x0800a3b4     0x1754 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
+                0x0800a3b4                __ssvfscanf_r
  .text.vsnprintf
-                0x0800bb68       0x70 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vsnprintf.o)
-                0x0800bb68                vsnprintf
+                0x0800bb08       0x70 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vsnprintf.o)
+                0x0800bb08                vsnprintf
  .text._write_r
-                0x0800bbd8       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-writer.o)
-                0x0800bbd8                _write_r
+                0x0800bb78       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-writer.o)
+                0x0800bb78                _write_r
  .text.__swsetup_r
-                0x0800bc04       0xd4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wsetup.o)
-                0x0800bc04                __swsetup_r
+                0x0800bba4       0xd4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wsetup.o)
+                0x0800bba4                __swsetup_r
  .text.startup.register_fini
-                0x0800bcd8       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0800bcec        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-atexit.o)
-                0x0800bcec                atexit
+                0x0800bc78       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0800bc8c        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-atexit.o)
+                0x0800bc8c                atexit
  .text._close_r
-                0x0800bcf8       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-closer.o)
-                0x0800bcf8                _close_r
- .text.quorem   0x0800bd1c      0x128 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
- *fill*         0x0800be44        0x4 
- .text._dtoa_r  0x0800be48      0xf3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
-                0x0800be48                _dtoa_r
+                0x0800bc98       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-closer.o)
+                0x0800bc98                _close_r
+ .text.quorem   0x0800bcbc      0x128 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
+ *fill*         0x0800bde4        0x4 
+ .text._dtoa_r  0x0800bde8      0xf3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
+                0x0800bde8                _dtoa_r
  .text.__sflush_r
-                0x0800cd84      0x130 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fflush.o)
-                0x0800cd84                __sflush_r
+                0x0800cd24      0x130 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fflush.o)
+                0x0800cd24                __sflush_r
  .text._fflush_r
-                0x0800ceb4       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fflush.o)
-                0x0800ceb4                _fflush_r
+                0x0800ce54       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fflush.o)
+                0x0800ce54                _fflush_r
  .text._cleanup_r
-                0x0800cf10        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
-                0x0800cf10                _cleanup_r
- .text.__sinit  0x0800cf1c      0x10c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
-                0x0800cf1c                __sinit
+                0x0800ceb0        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
+                0x0800ceb0                _cleanup_r
+ .text.__sinit  0x0800cebc      0x10c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
+                0x0800cebc                __sinit
  .text.__sfp_lock_acquire
-                0x0800d028        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
-                0x0800d028                __sfp_lock_acquire
+                0x0800cfc8        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
+                0x0800cfc8                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0800d034        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
-                0x0800d034                __sfp_lock_release
+                0x0800cfd4        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-findfp.o)
+                0x0800cfd4                __sfp_lock_release
  .text.__libc_fini_array
-                0x0800d040       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fini.o)
-                0x0800d040                __libc_fini_array
+                0x0800cfe0       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fini.o)
+                0x0800cfe0                __libc_fini_array
  .text._malloc_trim_r
-                0x0800d06c       0xa0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-freer.o)
-                0x0800d06c                _malloc_trim_r
- .text._free_r  0x0800d10c      0x20c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-freer.o)
-                0x0800d10c                _free_r
+                0x0800d00c       0xa0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-freer.o)
+                0x0800d00c                _malloc_trim_r
+ .text._free_r  0x0800d0ac      0x20c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-freer.o)
+                0x0800d0ac                _free_r
  .text.__sfvwrite_r
-                0x0800d318      0x2f0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fvwrite.o)
-                0x0800d318                __sfvwrite_r
+                0x0800d2b8      0x2f0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fvwrite.o)
+                0x0800d2b8                __sfvwrite_r
  .text._fwalk_reent
-                0x0800d608       0x48 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fwalk.o)
-                0x0800d608                _fwalk_reent
- .text.rshift   0x0800d650       0xa4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
+                0x0800d5a8       0x48 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fwalk.o)
+                0x0800d5a8                _fwalk_reent
+ .text.rshift   0x0800d5f0       0xa4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
  .text.__gethex
-                0x0800d6f4      0x5d8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
-                0x0800d6f4                __gethex
- .text.__match  0x0800dccc       0x38 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-hexnan.o)
-                0x0800dccc                __match
+                0x0800d694      0x5d8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
+                0x0800d694                __gethex
+ .text.__match  0x0800dc6c       0x38 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-hexnan.o)
+                0x0800dc6c                __match
  .text.__hexnan
-                0x0800dd04      0x1ac d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-hexnan.o)
-                0x0800dd04                __hexnan
+                0x0800dca4      0x1ac d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-hexnan.o)
+                0x0800dca4                __hexnan
  .text.iswspace
-                0x0800deb0        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-iswspace.o)
-                0x0800deb0                iswspace
+                0x0800de50        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-iswspace.o)
+                0x0800de50                iswspace
  .text.iswspace_l
-                0x0800deb8       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-iswspace_l.o)
-                0x0800deb8                iswspace_l
+                0x0800de58       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-iswspace_l.o)
+                0x0800de58                iswspace_l
  .text.__locale_mb_cur_max
-                0x0800decc        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
-                0x0800decc                __locale_mb_cur_max
+                0x0800de6c        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
+                0x0800de6c                __locale_mb_cur_max
  .text._localeconv_r
-                0x0800ded8        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-localeconv.o)
-                0x0800ded8                _localeconv_r
+                0x0800de78        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-localeconv.o)
+                0x0800de78                _localeconv_r
  .text.__retarget_lock_init_recursive
-                0x0800dee0        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x0800dee0                __retarget_lock_init_recursive
+                0x0800de80        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x0800de80                __retarget_lock_init_recursive
  .text.__retarget_lock_close_recursive
-                0x0800dee4        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x0800dee4                __retarget_lock_close_recursive
+                0x0800de84        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x0800de84                __retarget_lock_close_recursive
  .text.__retarget_lock_acquire_recursive
-                0x0800dee8        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x0800dee8                __retarget_lock_acquire_recursive
+                0x0800de88        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x0800de88                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0800deec        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x0800deec                __retarget_lock_release_recursive
+                0x0800de8c        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x0800de8c                __retarget_lock_release_recursive
  .text._lseek_r
-                0x0800def0       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lseekr.o)
-                0x0800def0                _lseek_r
+                0x0800de90       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lseekr.o)
+                0x0800de90                _lseek_r
  .text.__smakebuf_r
-                0x0800df1c       0xe0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-makebuf.o)
-                0x0800df1c                __smakebuf_r
+                0x0800debc       0xe0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-makebuf.o)
+                0x0800debc                __smakebuf_r
  .text._mbrtowc_r
-                0x0800dffc       0x44 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbrtowc.o)
-                0x0800dffc                _mbrtowc_r
+                0x0800df9c       0x44 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbrtowc.o)
+                0x0800df9c                _mbrtowc_r
  .text.__ascii_mbtowc
-                0x0800e040       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbtowc_r.o)
-                0x0800e040                __ascii_mbtowc
- .text.memcmp   0x0800e06c       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memcmp.o)
-                0x0800e06c                memcmp
- .text._Balloc  0x0800e0d0       0x4c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e0d0                _Balloc
- .text._Bfree   0x0800e11c       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e11c                _Bfree
+                0x0800dfe0       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbtowc_r.o)
+                0x0800dfe0                __ascii_mbtowc
+ .text.memcmp   0x0800e00c       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memcmp.o)
+                0x0800e00c                memcmp
+ .text._Balloc  0x0800e070       0x4c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e070                _Balloc
+ .text._Bfree   0x0800e0bc       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e0bc                _Bfree
  .text.__multadd
-                0x0800e130       0xa8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e130                __multadd
- .text.__s2b    0x0800e1d8       0xb4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e1d8                __s2b
+                0x0800e0d0       0xa8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e0d0                __multadd
+ .text.__s2b    0x0800e178       0xb4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e178                __s2b
  .text.__hi0bits
-                0x0800e28c       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e28c                __hi0bits
+                0x0800e22c       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e22c                __hi0bits
  .text.__lo0bits
-                0x0800e2cc       0x60 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e2cc                __lo0bits
- .text.__i2b    0x0800e32c       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e32c                __i2b
+                0x0800e26c       0x60 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e26c                __lo0bits
+ .text.__i2b    0x0800e2cc       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e2cc                __i2b
  .text.__multiply
-                0x0800e388      0x15c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e388                __multiply
+                0x0800e328      0x15c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e328                __multiply
  .text.__pow5mult
-                0x0800e4e4       0xc0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e4e4                __pow5mult
+                0x0800e484       0xc0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e484                __pow5mult
  .text.__lshift
-                0x0800e5a4       0xf0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e5a4                __lshift
- .text.__mcmp   0x0800e694       0x44 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e694                __mcmp
- .text.__mdiff  0x0800e6d8      0x14c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e6d8                __mdiff
- .text.__ulp    0x0800e824       0x60 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e824                __ulp
- .text.__b2d    0x0800e884       0xc0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e884                __b2d
- .text.__d2b    0x0800e944       0xd0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800e944                __d2b
- .text.__ratio  0x0800ea14       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800ea14                __ratio
+                0x0800e544       0xf0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e544                __lshift
+ .text.__mcmp   0x0800e634       0x44 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e634                __mcmp
+ .text.__mdiff  0x0800e678      0x14c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e678                __mdiff
+ .text.__ulp    0x0800e7c4       0x60 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e7c4                __ulp
+ .text.__b2d    0x0800e824       0xc0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e824                __b2d
+ .text.__d2b    0x0800e8e4       0xd0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e8e4                __d2b
+ .text.__ratio  0x0800e9b4       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800e9b4                __ratio
  .text.__copybits
-                0x0800ea70       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800ea70                __copybits
+                0x0800ea10       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800ea10                __copybits
  .text.__any_on
-                0x0800eacc       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x0800eacc                __any_on
- .text._read_r  0x0800eb30       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-readr.o)
-                0x0800eb30                _read_r
- .text.frexp    0x0800eb5c       0x6c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-s_frexp.o)
-                0x0800eb5c                frexp
- .text.nan      0x0800ebc8       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-s_nan.o)
-                0x0800ebc8                nan
- .text.__sccl   0x0800ebd8       0x8c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sccl.o)
-                0x0800ebd8                __sccl
- .text.nanf     0x0800ec64        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sf_nan.o)
-                0x0800ec64                nanf
- .text.strncpy  0x0800ec70       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strncpy.o)
-                0x0800ec70                strncpy
- .text.strnlen  0x0800ecd4       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strnlen.o)
-                0x0800ecd4                strnlen
+                0x0800ea6c       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x0800ea6c                __any_on
+ .text._read_r  0x0800ead0       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-readr.o)
+                0x0800ead0                _read_r
+ .text.frexp    0x0800eafc       0x6c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-s_frexp.o)
+                0x0800eafc                frexp
+ .text.nan      0x0800eb68       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-s_nan.o)
+                0x0800eb68                nan
+ .text.__sccl   0x0800eb78       0x8c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sccl.o)
+                0x0800eb78                __sccl
+ .text.nanf     0x0800ec04        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-sf_nan.o)
+                0x0800ec04                nanf
+ .text.strncpy  0x0800ec10       0x64 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strncpy.o)
+                0x0800ec10                strncpy
+ .text.strnlen  0x0800ec74       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strnlen.o)
+                0x0800ec74                strnlen
  .text._strtol_l.part.0
-                0x0800ecf8      0x120 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtol.o)
+                0x0800ec98      0x120 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtol.o)
  .text._strtol_r
-                0x0800ee18       0x1c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtol.o)
-                0x0800ee18                _strtol_r
+                0x0800edb8       0x1c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtol.o)
+                0x0800edb8                _strtol_r
  .text._strtoll_l.constprop.0
-                0x0800ee34      0x170 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoll.o)
+                0x0800edd4      0x170 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoll.o)
  .text._strtoll_r
-                0x0800efa4        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoll.o)
-                0x0800efa4                _strtoll_r
+                0x0800ef44        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoll.o)
+                0x0800ef44                _strtoll_r
  .text._strtoul_l.constprop.0
-                0x0800efa8      0x13c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoul.o)
+                0x0800ef48      0x13c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoul.o)
  .text._strtoul_r
-                0x0800f0e4        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoul.o)
-                0x0800f0e4                _strtoul_r
+                0x0800f084        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoul.o)
+                0x0800f084                _strtoul_r
  .text._strtoull_l.constprop.0
-                0x0800f0e8      0x19c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoull.o)
+                0x0800f088      0x19c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoull.o)
  .text._strtoull_r
-                0x0800f284        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoull.o)
-                0x0800f284                _strtoull_r
+                0x0800f224        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtoull.o)
+                0x0800f224                _strtoull_r
  .text.__ssprint_r
-                0x0800f288       0xf8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiprintf.o)
-                0x0800f288                __ssprint_r
+                0x0800f228       0xf8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiprintf.o)
+                0x0800f228                __ssprint_r
  .text._sungetc_r
-                0x0800f380       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
-                0x0800f380                _sungetc_r
+                0x0800f320       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
+                0x0800f320                _sungetc_r
  .text.__ssrefill_r
-                0x0800f400       0x3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
-                0x0800f400                __ssrefill_r
+                0x0800f3a0       0x3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
+                0x0800f3a0                __ssrefill_r
  .text._sfread_r
-                0x0800f43c       0xb4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
-                0x0800f43c                _sfread_r
+                0x0800f3dc       0xb4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfiscanf.o)
+                0x0800f3dc                _sfread_r
  .text.__submore
-                0x0800f4f0       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-ungetc.o)
-                0x0800f4f0                __submore
+                0x0800f490       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-ungetc.o)
+                0x0800f490                __submore
  .text.__sprint_r.part.0
-                0x0800f568       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x0800f508       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
  .text._vfiprintf_r
-                0x0800f5e0      0xdfc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
-                0x0800f5e0                _vfiprintf_r
+                0x0800f580      0xdfc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x0800f580                _vfiprintf_r
  .text.__sbprintf
-                0x080103dc       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x0801037c       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
  .text.__ascii_wctomb
-                0x0801045c       0x1c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wctomb_r.o)
-                0x0801045c                __ascii_wctomb
+                0x080103fc       0x1c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wctomb_r.o)
+                0x080103fc                __ascii_wctomb
  .text.__register_exitproc
-                0x08010478       0x8c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__atexit.o)
-                0x08010478                __register_exitproc
+                0x08010418       0x8c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__atexit.o)
+                0x08010418                __register_exitproc
  .text.__assert_func
-                0x08010504       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-assert.o)
-                0x08010504                __assert_func
+                0x080104a4       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-assert.o)
+                0x080104a4                __assert_func
  .text._calloc_r
-                0x08010544       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-callocr.o)
-                0x08010544                _calloc_r
+                0x080104e4       0x78 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-callocr.o)
+                0x080104e4                _calloc_r
  .text._fclose_r
-                0x080105bc       0xcc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fclose.o)
-                0x080105bc                _fclose_r
+                0x0801055c       0xcc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fclose.o)
+                0x0801055c                _fclose_r
  .text.fiprintf
-                0x08010688       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fiprintf.o)
-                0x08010688                fiprintf
+                0x08010628       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fiprintf.o)
+                0x08010628                fiprintf
  .text.__fputwc
-                0x080106b0       0xa8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fputwc.o)
-                0x080106b0                __fputwc
+                0x08010650       0xa8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fputwc.o)
+                0x08010650                __fputwc
  .text._fputwc_r
-                0x08010758       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fputwc.o)
-                0x08010758                _fputwc_r
+                0x080106f8       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fputwc.o)
+                0x080106f8                _fputwc_r
  .text._fstat_r
-                0x080107c0       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fstatr.o)
-                0x080107c0                _fstat_r
+                0x08010760       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fstatr.o)
+                0x08010760                _fstat_r
  .text._isatty_r
-                0x080107ec       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-isattyr.o)
-                0x080107ec                _isatty_r
+                0x0801078c       0x24 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-isattyr.o)
+                0x0801078c                _isatty_r
  .text.__swbuf_r
-                0x08010810       0xb0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wbuf.o)
-                0x08010810                __swbuf_r
+                0x080107b0       0xb0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wbuf.o)
+                0x080107b0                __swbuf_r
  .text._wcrtomb_r
-                0x080108c0       0x3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wcrtomb.o)
-                0x080108c0                _wcrtomb_r
- .text.abort    0x080108fc       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-abort.o)
-                0x080108fc                abort
- .text.raise    0x0801090c       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signal.o)
-                0x0801090c                raise
- .text._kill_r  0x08010968       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signalr.o)
-                0x08010968                _kill_r
+                0x08010860       0x3c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-wcrtomb.o)
+                0x08010860                _wcrtomb_r
+ .text.abort    0x0801089c       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-abort.o)
+                0x0801089c                abort
+ .text.raise    0x080108ac       0x5c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signal.o)
+                0x080108ac                raise
+ .text._kill_r  0x08010908       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signalr.o)
+                0x08010908                _kill_r
  .text._getpid_r
-                0x08010994        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signalr.o)
-                0x08010994                _getpid_r
- .text.cbrt     0x08010998      0x188 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_cbrt.o)
-                0x08010998                cbrt
- .text.cos      0x08010b20       0x90 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_cos.o)
-                0x08010b20                cos
- .text.floor    0x08010bb0      0x108 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_floor.o)
-                0x08010bb0                floor
- .text.acos     0x08010cb8       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_acos.o)
-                0x08010cb8                acos
- .text.exp      0x08010d20       0xa0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_exp.o)
-                0x08010d20                exp
- .text.log      0x08010dc0       0x84 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log.o)
-                0x08010dc0                log
- *fill*         0x08010e44        0x4 
- .text.log10    0x08010e48       0x84 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log10.o)
-                0x08010e48                log10
- *fill*         0x08010ecc        0x4 
- .text.pow      0x08010ed0       0xf0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_pow.o)
-                0x08010ed0                pow
- .text.sqrt     0x08010fc0       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_sqrt.o)
-                0x08010fc0                sqrt
+                0x08010934        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-signalr.o)
+                0x08010934                _getpid_r
+ .text.cbrt     0x08010938      0x188 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_cbrt.o)
+                0x08010938                cbrt
+ .text.cos      0x08010ac0       0x90 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_cos.o)
+                0x08010ac0                cos
+ .text.floor    0x08010b50      0x108 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_floor.o)
+                0x08010b50                floor
+ .text.acos     0x08010c58       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_acos.o)
+                0x08010c58                acos
+ .text.exp      0x08010cc0       0xa0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_exp.o)
+                0x08010cc0                exp
+ .text.log      0x08010d60       0x84 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log.o)
+                0x08010d60                log
+ *fill*         0x08010de4        0x4 
+ .text.log10    0x08010de8       0x84 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log10.o)
+                0x08010de8                log10
+ *fill*         0x08010e6c        0x4 
+ .text.pow      0x08010e70       0xf0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_pow.o)
+                0x08010e70                pow
+ .text.sqrt     0x08010f60       0x68 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_sqrt.o)
+                0x08010f60                sqrt
  .text.__ieee754_acos
-                0x08011028      0x4e0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_acos.o)
-                0x08011028                __ieee754_acos
+                0x08010fc8      0x4e0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_acos.o)
+                0x08010fc8                __ieee754_acos
  .text.__ieee754_exp
-                0x08011508      0x3dc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
-                0x08011508                __ieee754_exp
- *fill*         0x080118e4        0x4 
+                0x080114a8      0x3dc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
+                0x080114a8                __ieee754_exp
+ *fill*         0x08011884        0x4 
  .text.__ieee754_log
-                0x080118e8      0x438 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_log.o)
-                0x080118e8                __ieee754_log
+                0x08011888      0x438 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_log.o)
+                0x08011888                __ieee754_log
  .text.__ieee754_log10
-                0x08011d20      0x12c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_log10.o)
-                0x08011d20                __ieee754_log10
- *fill*         0x08011e4c        0x4 
+                0x08011cc0      0x12c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_log10.o)
+                0x08011cc0                __ieee754_log10
+ *fill*         0x08011dec        0x4 
  .text.__ieee754_pow
-                0x08011e50      0xb74 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_pow.o)
-                0x08011e50                __ieee754_pow
- *fill*         0x080129c4        0x4 
+                0x08011df0      0xb74 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_pow.o)
+                0x08011df0                __ieee754_pow
+ *fill*         0x08012964        0x4 
  .text.__ieee754_rem_pio2
-                0x080129c8      0x44c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
-                0x080129c8                __ieee754_rem_pio2
+                0x08012968      0x44c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
+                0x08012968                __ieee754_rem_pio2
  .text.__ieee754_sqrt
-                0x08012e14      0x198 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_sqrt.o)
-                0x08012e14                __ieee754_sqrt
- *fill*         0x08012fac        0x4 
+                0x08012db4      0x198 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_sqrt.o)
+                0x08012db4                __ieee754_sqrt
+ *fill*         0x08012f4c        0x4 
  .text.__kernel_cos
-                0x08012fb0      0x27c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_cos.o)
-                0x08012fb0                __kernel_cos
- *fill*         0x0801322c        0x4 
+                0x08012f50      0x27c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_cos.o)
+                0x08012f50                __kernel_cos
+ *fill*         0x080131cc        0x4 
  .text.__kernel_rem_pio2
-                0x08013230      0x850 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
-                0x08013230                __kernel_rem_pio2
+                0x080131d0      0x850 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
+                0x080131d0                __kernel_rem_pio2
  .text.__kernel_sin
-                0x08013a80      0x17c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_sin.o)
-                0x08013a80                __kernel_sin
+                0x08013a20      0x17c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_sin.o)
+                0x08013a20                __kernel_sin
  .text.with_errno
-                0x08013bfc       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
- .text.xflow    0x08013c14       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
+                0x08013b9c       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
+ .text.xflow    0x08013bb4       0x2c d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
  .text.__math_uflow
-                0x08013c40       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
-                0x08013c40                __math_uflow
+                0x08013be0       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
+                0x08013be0                __math_uflow
  .text.__math_oflow
-                0x08013c54       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
-                0x08013c54                __math_oflow
- .text.fabs     0x08013c68       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_fabs.o)
-                0x08013c68                fabs
- .text.finite   0x08013c7c       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_finite.o)
-                0x08013c7c                finite
- *fill*         0x08013c94        0x4 
- .text.scalbn   0x08013c98      0x124 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_scalbn.o)
-                0x08013c98                scalbn
+                0x08013bf4       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-math_err.o)
+                0x08013bf4                __math_oflow
+ .text.fabs     0x08013c08       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_fabs.o)
+                0x08013c08                fabs
+ .text.finite   0x08013c1c       0x18 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_finite.o)
+                0x08013c1c                finite
+ *fill*         0x08013c34        0x4 
+ .text.scalbn   0x08013c38      0x124 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_scalbn.o)
+                0x08013c38                scalbn
  *(.glue_7)
- .glue_7        0x08013dbc        0x0 linker stubs
+ .glue_7        0x08013d5c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08013dbc        0x0 linker stubs
+ .glue_7t       0x08013d5c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08013dbc        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08013d5c        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08013dbc        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08013dbc                _init
- .init          0x08013dc0        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08013d5c        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08013d5c                _init
+ .init          0x08013d60        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08013dc8        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08013dc8                _fini
- .fini          0x08013dcc        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08013dd8                . = ALIGN (0x8)
- *fill*         0x08013dd4        0x4 
-                0x08013dd8                _etext = .
+ .fini          0x08013d68        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08013d68                _fini
+ .fini          0x08013d6c        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08013d78                . = ALIGN (0x8)
+ *fill*         0x08013d74        0x4 
+                0x08013d78                _etext = .
 
-.vfp11_veneer   0x08013dd8        0x0
- .vfp11_veneer  0x08013dd8        0x0 linker stubs
+.vfp11_veneer   0x08013d78        0x0
+ .vfp11_veneer  0x08013d78        0x0 linker stubs
 
-.v4_bx          0x08013dd8        0x0
- .v4_bx         0x08013dd8        0x0 linker stubs
+.v4_bx          0x08013d78        0x0
+ .v4_bx         0x08013d78        0x0 linker stubs
 
-.iplt           0x08013dd8        0x0
- .iplt          0x08013dd8        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08013d78        0x0
+ .iplt          0x08013d78        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08013dd8     0x1668
-                0x08013dd8                . = ALIGN (0x8)
+.rodata         0x08013d78     0x15d8
+                0x08013d78                . = ALIGN (0x8)
  *(.rodata)
- .rodata        0x08013dd8        0xc build/rtc.o
+ .rodata        0x08013d78        0xc build/rtc.o
  *(.rodata*)
  .rodata.HardFault_Handler.str1.1
-                0x08013de4       0x19 build/stm32l4xx_it.o
+                0x08013d84       0x19 build/stm32l4xx_it.o
  .rodata.AHBPrescTable
-                0x08013dfd       0x10 build/system_stm32l4xx.o
-                0x08013dfd                AHBPrescTable
+                0x08013d9d       0x10 build/system_stm32l4xx.o
+                0x08013d9d                AHBPrescTable
  .rodata.APBPrescTable
-                0x08013e0d        0x8 build/system_stm32l4xx.o
-                0x08013e0d                APBPrescTable
- *fill*         0x08013e15        0x3 
+                0x08013dad        0x8 build/system_stm32l4xx.o
+                0x08013dad                APBPrescTable
+ *fill*         0x08013db5        0x3 
  .rodata.MSIRangeTable
-                0x08013e18       0x30 build/system_stm32l4xx.o
-                0x08013e18                MSIRangeTable
+                0x08013db8       0x30 build/system_stm32l4xx.o
+                0x08013db8                MSIRangeTable
  .rodata.print_string_ptr.str1.1
-                0x08013e48        0x9 build/cJSON.o
+                0x08013de8        0x9 build/cJSON.o
  .rodata.print_value.str1.1
-                0x08013e51       0x25 build/cJSON.o
+                0x08013df1       0x25 build/cJSON.o
  .rodata.cJSON_ParseWithLengthOpts.str1.1
-                0x08013e76        0x4 build/cJSON.o
+                0x08013e16        0x4 build/cJSON.o
  .rodata._ZN20from_member_functionIM11applicationFvffEE18to_unique_functionIXadL_ZNS0_21sht35_sample_completeEffEEEEvPvj.str1.1
-                0x08013e7a        0xb build/application.o
+                0x08013e1a        0xb build/application.o
  .rodata._ZN17iic_ms5803_driver12read_caldataEv.str1.1
-                0x08013e85        0x7 build/iic_ms5803_driver.o
+                0x08013e25        0x7 build/iic_ms5803_driver.o
  .rodata._ZL5table
-                0x08013e8c      0xa7c build/calculate.o
+                0x08013e2c      0xa7c build/calculate.o
  .rodata._ZTV10serialport
-                0x08014908       0x1c build/serialport.o
-                0x08014908                vtable for serialport
+                0x080148a8       0x1c build/serialport.o
+                0x080148a8                vtable for serialport
  .rodata._ZN4Lora11upload_dataEv.str1.1
-                0x08014924        0x7 build/lora.o
+                0x080148c4        0x7 build/lora.o
                                   0x2 (size before relaxing)
  .rodata._ZN4Lora7on_recvEh.str1.1
-                0x08014924       0x1d build/lora.o
- *fill*         0x08014941        0x3 
+                0x080148c4       0x1d build/lora.o
+ *fill*         0x080148e1        0x3 
  .rodata._ZTV4Lora
-                0x08014944       0x1c build/lora.o
-                0x08014944                vtable for Lora
+                0x080148e4       0x1c build/lora.o
+                0x080148e4                vtable for Lora
  .rodata._ZN4Host7on_recvEh.str1.1
-                0x08014960       0x4f build/host.o
+                0x08014900       0x4f build/host.o
                                  0x54 (size before relaxing)
- *fill*         0x080149af        0x1 
+ *fill*         0x0801494f        0x1 
  .rodata._ZTV4Host
-                0x080149b0       0x18 build/host.o
-                0x080149b0                vtable for Host
- .rodata._ZN15ProtocolManager21parse_host_at_commandEPKc.str1.1
-                0x080149c8       0x17 build/protocol_manager.o
-                                 0x1f (size before relaxing)
+                0x08014950       0x18 build/host.o
+                0x08014950                vtable for Host
  .rodata._ZN15ProtocolManager27generate_lora_protocol_jsonEPKcS1_P5cJSON.str1.1
-                0x080149df       0xe1 build/protocol_manager.o
-                                 0xe2 (size before relaxing)
+                0x08014968       0xc2 build/protocol_manager.o
+                                 0xc3 (size before relaxing)
+ .rodata._ZN15ProtocolManager21parse_host_at_commandEPKc.str1.1
+                0x08014a2a        0xf build/protocol_manager.o
+                                 0x17 (size before relaxing)
+ .rodata._Z15internal_printfPKcz.str1.1
+                0x08014a39        0x6 build/protocol_manager.o
  .rodata._ZN15ProtocolManager25lora_protocol_json_handleEPKc.str1.1
-                0x08014ac0      0x14f build/protocol_manager.o
- *fill*         0x08014c0f        0x1 
+                0x08014a3f       0xe2 build/protocol_manager.o
+ *fill*         0x08014b21        0x3 
  .rodata._ctype_
-                0x08014c10      0x101 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-ctype_.o)
-                0x08014c10                _ctype_
- *fill*         0x08014d11        0x3 
+                0x08014b24      0x101 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-ctype_.o)
+                0x08014b24                _ctype_
+ *fill*         0x08014c25        0x3 
  .rodata._global_impure_ptr
-                0x08014d14        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-impure.o)
-                0x08014d14                _global_impure_ptr
+                0x08014c28        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-impure.o)
+                0x08014c28                _global_impure_ptr
  .rodata._puts_r.str1.4
-                0x08014d18        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
- *fill*         0x08014d1a        0x2 
+                0x08014c2c        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-puts.o)
+ *fill*         0x08014c2e        0x2 
  .rodata._strtod_l.str1.4
-                0x08014d1c        0xf d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+                0x08014c30        0xf d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
                                  0x11 (size before relaxing)
- *fill*         0x08014d2b        0x1 
- .rodata.fpi.1  0x08014d2c       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+ *fill*         0x08014c3f        0x1 
+ .rodata.fpi.1  0x08014c40       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
  .rodata.fpinan.0
-                0x08014d40       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
- *fill*         0x08014d54        0x4 
+                0x08014c54       0x14 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
  .rodata.tinytens
-                0x08014d58       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
+                0x08014c68       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-strtod.o)
  .rodata._svfprintf_r.str1.4
-                0x08014d80       0x42 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
- *fill*         0x08014dc2        0x2 
+                0x08014c90       0x42 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
+ *fill*         0x08014cd2        0x2 
  .rodata.blanks.1
-                0x08014dc4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
+                0x08014cd4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
  .rodata.zeroes.0
-                0x08014dd4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
+                0x08014ce4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfprintf.o)
  .rodata.__ssvfscanf_r.str1.4
-                0x08014de4        0x5 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
+                0x08014cf4        0x5 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
                                   0x9 (size before relaxing)
- *fill*         0x08014de9        0x3 
+ *fill*         0x08014cf9        0x3 
  .rodata.basefix.0
-                0x08014dec       0x22 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
- *fill*         0x08014e0e        0x2 
+                0x08014cfc       0x22 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
+ *fill*         0x08014d1e        0x2 
  .rodata._dtoa_r.str1.4
-                0x08014e10       0xa2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
+                0x08014d20       0xa2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-dtoa.o)
                                  0xa6 (size before relaxing)
- *fill*         0x08014eb2        0x2 
+ *fill*         0x08014dc2        0x2 
  .rodata.__gethex.str1.4
-                0x08014eb4       0x86 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
+                0x08014dc4       0x86 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
                                  0x9a (size before relaxing)
- *fill*         0x08014f3a        0x2 
+ *fill*         0x08014e4a        0x2 
  .rodata.__hexdig
-                0x08014f3c      0x100 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
-                0x08014f3c                __hexdig
+                0x08014e4c      0x100 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-gdtoa-gethex.o)
+                0x08014e4c                __hexdig
  .rodata.str1.4
-                0x0801503c        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lnumeric.o)
+                0x08014f4c        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lnumeric.o)
                                   0x5 (size before relaxing)
- *fill*         0x0801503e        0x2 
+ *fill*         0x08014f4e        0x2 
  .rodata._C_numeric_locale
-                0x08015040        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lnumeric.o)
-                0x08015040                _C_numeric_locale
+                0x08014f50        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lnumeric.o)
+                0x08014f50                _C_numeric_locale
  .rodata._setlocale_r.str1.4
-                0x0801504c        0xa d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
+                0x08014f5c        0xa d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
                                   0xd (size before relaxing)
  .rodata.str1.4
-                0x08015056        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
+                0x08014f66        0x2 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-locale.o)
  .rodata._mbrtowc_r.str1.4
-                0x08015056        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbrtowc.o)
- *fill*         0x08015056        0x2 
+                0x08014f66        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mbrtowc.o)
+ *fill*         0x08014f66        0x2 
  .rodata.__multadd.str1.4
-                0x08015058       0x7f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x08014f68       0x7f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
                                  0x93 (size before relaxing)
- *fill*         0x080150d7        0x1 
+ *fill*         0x08014fe7        0x1 
  .rodata.__mprec_bigtens
-                0x080150d8       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x080150d8                __mprec_bigtens
+                0x08014fe8       0x28 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x08014fe8                __mprec_bigtens
  .rodata.__mprec_tens
-                0x08015100       0xc8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
-                0x08015100                __mprec_tens
- .rodata.p05.0  0x080151c8        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x08015010       0xc8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
+                0x08015010                __mprec_tens
+ .rodata.p05.0  0x080150d8        0xc d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-mprec.o)
  .rodata._vfiprintf_r.str1.4
-                0x080151d4       0x2f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x080150e4       0x2f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
  .rodata.blanks.1
-                0x080151d4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x080150e4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
  .rodata.zeroes.0
-                0x080151e4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
+                0x080150f4       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-vfiprintf.o)
  .rodata.__assert_func.str1.4
-                0x080151f4       0x3f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-assert.o)
+                0x08015104       0x3f d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-assert.o)
                                  0x43 (size before relaxing)
  .rodata.acos.str1.4
-                0x08015233        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_acos.o)
+                0x08015143        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_acos.o)
  .rodata.log.str1.4
-                0x08015233        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log.o)
+                0x08015143        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log.o)
  .rodata.log10.str1.4
-                0x08015233        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log10.o)
- *fill*         0x08015233        0x5 
- .rodata.halF   0x08015238       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
- .rodata.ln2HI  0x08015248       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
- .rodata.ln2LO  0x08015258       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
+                0x08015143        0x1 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log10.o)
+ *fill*         0x08015143        0x5 
+ .rodata.halF   0x08015148       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
+ .rodata.ln2HI  0x08015158       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
+ .rodata.ln2LO  0x08015168       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_exp.o)
  .rodata.npio2_hw
-                0x08015268       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
+                0x08015178       0x80 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x080152e8      0x108 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
- .rodata.PIo2   0x080153f0       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
+                0x080151f8      0x108 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_rem_pio2.o)
+ .rodata.PIo2   0x08015300       0x40 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x08015430       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
-                0x08015440                . = ALIGN (0x8)
+                0x08015340       0x10 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-k_rem_pio2.o)
+                0x08015350                . = ALIGN (0x8)
 
-.ARM.extab      0x08015440        0x0
-                0x08015440                . = ALIGN (0x8)
+.ARM.extab      0x08015350        0x0
+                0x08015350                . = ALIGN (0x8)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08015440                . = ALIGN (0x8)
+                0x08015350                . = ALIGN (0x8)
 
-.ARM            0x08015440        0x8
-                0x08015440                . = ALIGN (0x8)
-                0x08015440                __exidx_start = .
+.ARM            0x08015350        0x8
+                0x08015350                . = ALIGN (0x8)
+                0x08015350                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08015440        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08015448                __exidx_end = .
-                0x08015448                . = ALIGN (0x8)
+ .ARM.exidx     0x08015350        0x8 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08015358                __exidx_end = .
+                0x08015358                . = ALIGN (0x8)
 
-.rel.dyn        0x08015448        0x0
- .rel.iplt      0x08015448        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08015358        0x0
+ .rel.iplt      0x08015358        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08015448        0x0
-                0x08015448                . = ALIGN (0x8)
-                0x08015448                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08015358        0x0
+                0x08015358                . = ALIGN (0x8)
+                0x08015358                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08015448                PROVIDE (__preinit_array_end = .)
-                0x08015448                . = ALIGN (0x8)
+                0x08015358                PROVIDE (__preinit_array_end = .)
+                0x08015358                . = ALIGN (0x8)
 
-.init_array     0x08015448        0x8
-                0x08015448                . = ALIGN (0x8)
-                0x08015448                PROVIDE (__init_array_start = .)
+.init_array     0x08015358        0x8
+                0x08015358                . = ALIGN (0x8)
+                0x08015358                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08015448        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
+                0x08015358        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0801544c        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08015450                PROVIDE (__init_array_end = .)
-                0x08015450                . = ALIGN (0x8)
+ .init_array    0x0801535c        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08015360                PROVIDE (__init_array_end = .)
+                0x08015360                . = ALIGN (0x8)
 
-.fini_array     0x08015450        0x8
-                0x08015450                . = ALIGN (0x8)
-                0x08015450                PROVIDE (__fini_array_start = .)
+.fini_array     0x08015360        0x8
+                0x08015360                . = ALIGN (0x8)
+                0x08015360                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08015450        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08015454                PROVIDE (__fini_array_end = .)
-                0x08015458                . = ALIGN (0x8)
- *fill*         0x08015454        0x4 
-                0x08015458                _sidata = LOADADDR (.data)
+ .fini_array    0x08015360        0x4 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08015364                PROVIDE (__fini_array_end = .)
+                0x08015368                . = ALIGN (0x8)
+ *fill*         0x08015364        0x4 
+                0x08015368                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x9c8 load address 0x08015458
+.data           0x20000000      0x9c8 load address 0x08015368
                 0x20000000                . = ALIGN (0x8)
                 0x20000000                _sdata = .
  *(.data)
@@ -2865,11 +2864,11 @@ LOAD d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/
  *fill*         0x200009c4        0x4 
                 0x200009c8                _edata = .
 
-.igot.plt       0x200009c8        0x0 load address 0x08015e20
+.igot.plt       0x200009c8        0x0 load address 0x08015d30
  .igot.plt      0x200009c8        0x0 d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x200009c8                . = ALIGN (0x4)
 
-.bss            0x200009c8      0x4e0 load address 0x08015e20
+.bss            0x200009c8      0x4e0 load address 0x08015d30
                 0x200009c8                _sbss = .
                 0x200009c8                __bss_start__ = _sbss
  *(.bss)
@@ -2966,7 +2965,7 @@ LOAD d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/
                 0x20000ea8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000ea8      0x600 load address 0x08015e20
+                0x20000ea8      0x600 load address 0x08015d30
                 0x20000ea8                . = ALIGN (0x8)
                 [!provide]                PROVIDE (end = .)
                 0x20000ea8                PROVIDE (_end = .)
@@ -4825,8 +4824,7 @@ realloc                                           d:/work/leycee/gcc-arm-none-ea
                                                   d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-svfscanf.o)
                                                   build/cJSON.o
 remove_crlf(char*)                                build/lora.o
-reset_log_buffer()                                build/protocol_manager.o
-                                                  build/host.o
+reset_log_buffer()                                build/host.o
                                                   build/lora.o
                                                   build/application.o
 scalbn                                            d:/work/leycee/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-s_scalbn.o)
