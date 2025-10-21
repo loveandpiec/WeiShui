@@ -54,10 +54,13 @@ public:
     void host_enter_standby_mode()
     {
         // 检查Host是否接收到数据
-        if (!_host.is_data_received() && !_host.standby_timer_canceled()) {
+        if (!_host.is_data_received() && !_host.standby_timer_canceled()) 
+        {
             // printf("No data received within 10s, entering standby mode...\r\n");
             power_manager.enter_standby_mode();
-        } else {
+        } 
+        else 
+        {
              _timer.cancel();
             // printf("Data received or timer canceled, skipping standby...\r\n");
         }
@@ -78,6 +81,7 @@ public:
         // 把数据同步给protocol_manager
         ms5830->read_caldata();
         _ms5830.read();
+        // internal_printf("aaaaa\r\n");
         // 启动Host通信（但不进入循环等待）
         _host.start_communication_prepare();
         // led_blink();

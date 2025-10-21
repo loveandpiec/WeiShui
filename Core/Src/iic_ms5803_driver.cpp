@@ -5,6 +5,7 @@
 #include <stm32l4xx_ll_utils.h>
 #include <stdio.h>
 #include <task_queue.h>
+#include "protocol_manager.h"
 extern "C"
 {
     extern void (*iic_dma_rx_complete)(void *);
@@ -77,7 +78,7 @@ void iic_ms5803_driver::read_caldata()
     for (int i = 0; i < 6; i++)
     {
         cali_para[i+1] = sync_read(i);
-        // printf("cali_para=%d\n",cali_para[i+1]);
+        internal_printf("cali_para=%d\n",cali_para[i+1]);
         LL_mDelay(1);
     }
     //LL_I2C_ClearFlag_TXE(I2C1);

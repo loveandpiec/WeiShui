@@ -1,4 +1,4 @@
-#include <calculate.h>
+#include "calculate.h"
 #include <math.h>
 #include <stddef.h>
 #include <stdio.h>
@@ -71,7 +71,7 @@ const float table[61][11] = {
 
 double interp_z(double x, double y)
 {
-    if (x < 0 || x > 1.0 || y > 0 || y < -60)
+     if (x < 0 || x > 1.0 || y > 0 || y < -60)
         return 0;
 
     // x, y 匹配到表格中的坐标系
@@ -116,19 +116,6 @@ void calculate::calculate_sf6(result &r, param &param_in)
     r.Press = param_in.Ms5803Pressure / 10.0;
     r.Tempture = param_in.Sht30Temperature;
     r.RH_f = param_in.Sht30Humidity;
-    const double m = (-20 < param_in.Sht30Temperature && param_in.Sht30Temperature < 50) ? 7.591386 : 7.337936;
-    const double A = (-20 < param_in.Sht30Temperature && param_in.Sht30Temperature < 50) ? 6.116441 : 6.004918;
-    const double Tn = (-20 < param_in.Sht30Temperature && param_in.Sht30Temperature < 50) ? 240.7263 : 229.3975;
-    double bao_he_zhen_qi_ya = A * pow(10.0, m * param_in.Sht30Temperature / (param_in.Sht30Temperature + Tn)) / 1000.0;
-    double shui_qi_ya = bao_he_zhen_qi_ya * param_in.Sht30Humidity / 100;
-    double Sht30Humidity = shui_qi_ya / param_in.Ms5803Pressure;
-    double xiang_dui_shi_du_zhen_qi_ya = bao_he_zhen_qi_ya * Sht30Humidity;
-    double da_qi_ya_zhen_qi_ya = 1 * xiang_dui_shi_du_zhen_qi_ya;
-    double han_shui_liang = Sht30Humidity / 100 * 0.6219907 * bao_he_zhen_qi_ya / (1.01325 - bao_he_zhen_qi_ya);
-    r.Point = Tn / (m / log10(da_qi_ya_zhen_qi_ya * 1000 / A) - 1);
-    double ya_suo_lu_dian = (243.5 * log((han_shui_liang * 461.519 * param_in.Ms5803Pressure) / ((han_shui_liang * 461.519 + 287)) * 1000 / 6.1112)) / (17.67 - log((han_shui_liang * 461.519 * param_in.Ms5803Pressure) / ((han_shui_liang * 461.519 + 287)) * 1000 / 6.1112));
-    double ppmv = bao_he_zhen_qi_ya * Sht30Humidity * 1000000 / param_in.Ms5803Pressure;
-    r.PPMS = ppmv;
     // printf("Ludian=%.6f,PPMV=%.6f\n",r.Point,ppmv);
     // 方程系数
     constexpr double Ax = 7.3882e-4;
@@ -189,7 +176,7 @@ void calculate::calculate_sf6(result &r, param &param_in)
 
     r.PPMS = interp_z(r.Press, Td);
     r.Point = Td;
-    // printf("ppm: %.2f\n", r.PPMS);
+    printf("ppm: %.2f\n", r.PPMS);
     // printf("%e,%e,%e,%e,%e,%e,%f,P20=%e\n",a,b,c,d,p,q,desity,r.P20);
     // printf("%e",a*desity*desity*desity/1e9+b*desity*desity/1e6+c*desity/1e3+d);
 }
