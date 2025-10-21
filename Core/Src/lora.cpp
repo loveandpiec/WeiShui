@@ -64,7 +64,7 @@ void Lora::on_recv(uint8_t ch)
     // if(ch == '\n' && count_>=5) 
     if(LL_LPUART_IsActiveFlag_IDLE(LPUART1)&&LL_LPUART_IsEnabledIT_IDLE(LPUART1))
     {
-        internal_printf("完整响应[%d字节]: %s", count_, recv_buffer_);
+        // internal_printf("完整响应[%d字节]: %s", count_, recv_buffer_);
         recv_buffer_[count_] = '\0';  // 确保字符串终止
         if(strstr((char*)recv_buffer_,"{")&&(strstr((char*)recv_buffer_,"}")))
         {
@@ -92,7 +92,7 @@ void Lora::on_recv(uint8_t ch)
 
 void Lora::on_recv_idle()
 {
-    internal_printf("完整响应[%d字节]: %s", count_, recv_buffer_);
+    // internal_printf("完整响应[%d字节]: %s", count_, recv_buffer_);
     recv_buffer_[count_] = '\0';  // 确保字符串终止
     if(count_>=5)
     {

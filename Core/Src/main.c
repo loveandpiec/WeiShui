@@ -93,8 +93,8 @@ int main(void)
 
     /* 3. 初始化必要的外设 */
     MX_GPIO_Init();
-    // MX_I2C1_Init();
-    // MX_ADC1_Init();
+    MX_I2C1_Init();
+    MX_ADC1_Init();
     MX_USART1_UART_Init();
     MX_LPUART1_UART_Init();
     MX_RTC_Init();  // 取消注释
