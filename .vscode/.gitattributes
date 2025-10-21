@@ -1,0 +1,7 @@
+# 忽略 build 文件夹的合并冲突
+build/ merge=ours
+*/build/ merge=ours
+build/* merge=ours
+dist/ merge=ours
+*/dist/ merge=ours
+dist/* merge=ours
